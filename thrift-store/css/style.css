@@ -692,3 +692,38 @@ body.auth-body { padding-bottom: 0; }
 .mb-16 { margin-bottom: 16px; }
 .text-center { text-align: center; }
 .product-card[style*="cursor:default"]:hover { transform: none; box-shadow: none; }
+
+/* ── MOBILE (under 600px) ── */
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 0 10px 10px;
+  }
+
+  .scroll-row .product-card {
+    min-width: 130px;
+    max-width: 130px;
+  }
+
+  .section-label h2 { font-size: 17px; }
+
+  .bottom-nav {
+    width: calc(100% - 16px);
+    bottom: 8px;
+    border-radius: 20px;
+  }
+
+  .topbar-logo { font-size: 18px; }
+
+  .modal-sheet { padding: 16px; }
+
+  .cat-chip-icon { width: 48px; height: 48px; font-size: 22px; }
+}
+
+/* ── TABLET (600px–900px) ── */
+@media (min-width: 601px) and (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
