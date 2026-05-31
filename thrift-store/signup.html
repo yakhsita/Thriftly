@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up – Thriftly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+
+<div class="auth-page">
+  <div class="auth-logo">Thrift<span>ly</span></div>
+  <div class="auth-tagline">Join thousands of smart thrifters 🌿</div>
+
+  <div class="auth-card">
+    <h2>Create account</h2>
+    <p>Start buying and selling pre-loved items</p>
+
+    <div class="form-group">
+      <label for="full_name">Full Name</label>
+      <input class="form-input" type="text" id="full_name" placeholder="Your name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input class="form-input" type="email" id="email" placeholder="you@example.com" autocomplete="email">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input class="form-input" type="password" id="password" placeholder="Min. 6 characters" onkeydown="if(event.key==='Enter') signup()">
+    </div>
+
+    <div class="error-msg" id="error-msg"></div>
+
+    <button class="btn-primary" id="auth-btn" onclick="signup()">Create Account</button>
+
+    <div class="auth-switch">
+      Already have an account? <a href="login.html">Sign in</a>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
